@@ -12,7 +12,8 @@ public class QuoteValidationException
 
   @Override
   public QuoteValidationException fold(QuoteValidationException other) {
-    var foldedMessage = "null";
-    return new QuoteValidationException(foldedMessage);
+    return new QuoteValidationException(
+        this.getMessage() + "; " + other.getMessage()
+    );
   }
 }

@@ -1,7 +1,7 @@
 package com.waytoodanny.demo.vavr.configuration;
 
 import com.waytoodanny.demo.vavr.service.QuoteSource;
-import com.waytoodanny.demo.vavr.service.impl.FileBasedQuoteSource;
+import com.waytoodanny.demo.vavr.service.impl.InMemoryQuoteSource;
 import com.waytoodanny.demo.vavr.util.ApplicationResources;
 
 import java.nio.file.Path;
@@ -9,7 +9,7 @@ import java.nio.file.Path;
 public class CommonConfiguration {
 
   public QuoteSource fileBasedQuoteSource() {
-    return new FileBasedQuoteSource(
+    return new InMemoryQuoteSource(
         applicationResourcesCsvSourceFile()
     );
   }
