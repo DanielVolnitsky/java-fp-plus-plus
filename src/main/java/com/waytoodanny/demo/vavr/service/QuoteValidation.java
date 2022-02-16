@@ -11,5 +11,5 @@ public interface QuoteValidation {
   /**
    * @return validation result: either composed {@link Quote} or validation exceptions
    * */
-  Validation<Seq<QuoteValidationException>, Quote> validate(QuoteCandidate quoteCandidate);
+  Validation<Seq<QuoteValidationException>, Quote> validationResult(QuoteCandidate quoteCandidate);
 }
