@@ -45,7 +45,7 @@ public class DefaultQuoteValidation implements QuoteValidation {
     );
   }
 
-  private Validation<QuoteValidationException, String> authorValidated(
+  private static Validation<QuoteValidationException, String> authorValidated(
       String authorCandidate
   ) {
     return validated(
@@ -56,7 +56,7 @@ public class DefaultQuoteValidation implements QuoteValidation {
     );
   }
 
-  private Validation<QuoteValidationException, SupportedLanguage> supportedLanguageValidated(
+  private static Validation<QuoteValidationException, SupportedLanguage> supportedLanguageValidated(
       String languageCandidate
   ) {
     return validated(
